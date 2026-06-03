@@ -1,0 +1,107 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+}
+
+/* Header */
+
+#mainHeader{
+    background:linear-gradient(
+        to right,
+        #007bff,
+        #00c6ff
+    );
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    background:black;
+}
+
+nav ul li{
+    margin:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.eventCard{
+    border:1px solid gray;
+    padding:15px;
+    margin:15px;
+    border-radius:10px;
+}
+
+.gallery{
+    width:200px;
+    border:2px solid black;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td,th{
+    border:1px solid black;
+    text-align:center;
+    padding:10px;
+}
+
+tr:nth-child(even){
+    background:#ddd;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:400px;
+    margin:auto;
+}
+
+textarea{
+    height:120px;
+}
+
+.news{
+    column-count:2;
+    column-gap:30px;
+    column-rule:1px solid gray;
+}
+
+@media(max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    .gallery{
+        width:100px;
+    }
+
+    body{
+        font-size:14px;
+    }
+}

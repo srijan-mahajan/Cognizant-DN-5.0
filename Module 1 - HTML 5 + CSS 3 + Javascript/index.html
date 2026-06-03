@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="mainHeader">
+    <h1 style="color:red;">Community Event Portal</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <div id="welcomeBanner">
+        Welcome User!
+        <span style="color:red;font-weight:bold;">
+            Special Offer
+        </span>
+    </div>
+</section>
+
+<section id="events">
+    <h2>Upcoming Events</h2>
+
+    <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="Music">Music</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Sports">Sports</option>
+    </select>
+
+    <div id="eventContainer"></div>
+</section>
+
+<section>
+    <h2>Event Gallery</h2>
+
+    <table>
+        <tr>
+            <td><img src="images/event1.jpg" class="gallery"></td>
+            <td><img src="images/event2.jpg" class="gallery"></td>
+            <td><img src="images/event3.jpg" class="gallery"></td>
+        </tr>
+
+        <tr>
+            <td><img src="images/event4.jpg" class="gallery"></td>
+            <td><img src="images/event5.jpg" class="gallery"></td>
+            <td><img src="images/event6.jpg" class="gallery"></td>
+        </tr>
+    </table>
+</section>
+
+<section id="register">
+    <h2>Registration Form</h2>
+
+    <form id="eventForm">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            autofocus>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required>
+
+        <input
+            type="date"
+            required>
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Phone">
+
+        <select id="eventType">
+            <option>Music</option>
+            <option>Workshop</option>
+            <option>Sports</option>
+        </select>
+
+        <textarea
+            id="feedback"
+            placeholder="Feedback">
+        </textarea>
+
+        <p>Characters:
+            <span id="count">0</span>
+        </p>
+
+        <button type="submit" id="registerBtn">
+            Register
+        </button>
+
+        <output id="message"></output>
+
+    </form>
+</section>
+
+<section>
+    <h2>Promo Video</h2>
+
+    <video id="promoVideo" width="500" controls>
+        <source src="videos/promo.mp4" type="video/mp4">
+    </video>
+
+    <p id="videoMsg"></p>
+</section>
+
+<section>
+    <button onclick="findLocation()">
+        Find Nearby Events
+    </button>
+
+    <p id="location"></p>
+</section>
+
+<footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email : support@community.com</p>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
